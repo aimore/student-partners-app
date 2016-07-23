@@ -12,9 +12,8 @@ namespace StudentPartners.Models
         public string LastName { get; set; }
         public string PhotoUrl { get; set; }
         public string Email { get; set; }
-
-        // Address
-        public string Country { get; set; }
+        public string PhoneNumber { get; set; }
+        public Address Address { get; set; }
 
         public string Name
         {

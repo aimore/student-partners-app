@@ -101,7 +101,12 @@ namespace StudentPartners.Controls
         {
             base.OnBindingContextChanged();
 
-            View.BindingContext = BindingContext;
+            if (BindingContext != null)
+            {
+                textLabel.Text = Text;
+                detailTextLabel.Text = Detail;
+                image.Source = ImageSource;
+            }
         }
     }
 }

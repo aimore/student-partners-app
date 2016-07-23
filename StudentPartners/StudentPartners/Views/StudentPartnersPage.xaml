@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StudentPartners.Controls;aseembly=StudentPartners"
+             x:Class="StudentPartners.Views.StudentPartnersPage"
+             Title="Student Partners">
+  <ContentPage.Content>
+    <ListView ItemsSource="{Binding StudentPartners}"
+              HasUnevenRows="True"
+              SeparatorVisibility="None"
+              CachingStrategy="RecycleElement">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <local:CardViewCell Text="{Binding Name}" Detail="Student Partner" ImageSource="{Binding PhotoUrl}" />
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage.Content>
+</ContentPage>

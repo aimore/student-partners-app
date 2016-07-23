@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using StudentPartners.Views;
+
 using Xamarin.Forms;
 
 namespace StudentPartners
@@ -13,7 +15,7 @@ namespace StudentPartners
         {
             InitializeComponent();
 
-            MainPage = new StudentPartners.MainPage();
+            MainPage = new RootPage();
         }
 
         protected override void OnStart()
