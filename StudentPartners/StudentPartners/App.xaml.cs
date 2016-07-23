@@ -6,7 +6,9 @@ using System.Text;
 using StudentPartners.Views;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace StudentPartners
 {
     public partial class App : Application
