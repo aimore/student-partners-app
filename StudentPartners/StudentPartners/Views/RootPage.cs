@@ -19,11 +19,7 @@ namespace StudentPartners.Views
         {
             Pages = new Dictionary<MenuType, NavigationPage>();
             Master = new MenuPage(this);
-
-            BindingContext = new BaseViewModel
-            {
-                Title = "Yammerly"
-            };
+            Title = "Xamarin Student Partners";
 
             NavigateAsync(MenuType.StudentPartners);
 

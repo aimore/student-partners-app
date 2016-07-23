@@ -8,6 +8,7 @@ namespace StudentPartners.Models
 {
     public class Address
     {
+        public string Attention { get; set; }
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
         public string ZipCode { get; set; }

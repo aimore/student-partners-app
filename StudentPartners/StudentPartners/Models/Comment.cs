@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace StudentPartners.Models
 {
-    public class HomeMenuItem
+    public class Comment
     {
-        public string Title { get; set; }
-        public string Icon { get; set; }
-        public MenuType MenuType { get; set; }
+        public StudentPartner Author { get; set; }
+        public string Text { get; set; }
     }
 }

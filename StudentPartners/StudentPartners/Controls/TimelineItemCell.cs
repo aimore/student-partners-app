@@ -1,17 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
 namespace StudentPartners.Controls
 {
-    public class CardViewCell : ViewCell
+    public class TimelineItemCell : ViewCell
     {
         public static readonly BindableProperty TextProperty =
-            BindableProperty.Create(nameof(Text), typeof(string), typeof(CardViewCell), null, BindingMode.OneWay, propertyChanged: (BindableObject bindable, object oldValue, object newValue) =>
-            {
-                var ctrl = (CardViewCell)bindable;
-                ctrl.Text = (string)newValue;
-            });
+    BindableProperty.Create(nameof(Text), typeof(string), typeof(CardViewCell), null, BindingMode.OneWay, propertyChanged: (BindableObject bindable, object oldValue, object newValue) =>
+    {
+        var ctrl = (CardViewCell)bindable;
+        ctrl.Text = (string)newValue;
+    });
 
         public string Text
         {
@@ -51,7 +55,7 @@ namespace StudentPartners.Controls
         Label textLabel;
         Label detailTextLabel;
 
-        public CardViewCell()
+        public TimelineItemCell()
         {
             image = new Image
             {

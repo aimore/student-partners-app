@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using StudentPartners.ViewModels;
+
 using Xamarin.Forms;
 
 namespace StudentPartners.Views
@@ -13,6 +15,8 @@ namespace StudentPartners.Views
         public TimelinePage()
         {
             InitializeComponent();
+
+            BindingContext = new TimelineViewModel();
         }
     }
 }

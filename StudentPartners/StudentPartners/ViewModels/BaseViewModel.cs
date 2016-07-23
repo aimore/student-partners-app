@@ -6,41 +6,6 @@ namespace StudentPartners.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        private string title = string.Empty;
-        public const string TitlePropertyName = "Title";
-
-        /// <summary>
-        /// Gets or sets the "Title" property
-        /// </summary>
-        /// <value>The title.</value>
-        public string Title
-        {
-            get { return title; }
-            set { SetProperty(ref title, value, TitlePropertyName); }
-        }
-
-        private string subTitle = string.Empty;
-        /// <summary>
-        /// Gets or sets the "Subtitle" property
-        /// </summary>
-        public const string SubtitlePropertyName = "Subtitle";
-        public string Subtitle
-        {
-            get { return subTitle; }
-            set { SetProperty(ref subTitle, value, SubtitlePropertyName); }
-        }
-
-        private string icon = null;
-        /// <summary>
-        /// Gets or sets the "Icon" of the viewmodel
-        /// </summary>
-        public const string IconPropertyName = "Icon";
-        public string Icon
-        {
-            get { return icon; }
-            set { SetProperty(ref icon, value, IconPropertyName); }
-        }
-
         private bool isBusy;
         /// <summary>
         /// Gets or sets if the view is busy.

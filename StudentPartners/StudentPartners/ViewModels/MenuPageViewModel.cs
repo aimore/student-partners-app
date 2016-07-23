@@ -10,8 +10,6 @@ namespace StudentPartners.ViewModels
     {
         public MenuPageViewModel()
         {
-            Title = "Yammerly";
-            Icon = "";
             ProfilePhotoUrl = "https://avatars3.githubusercontent.com/u/1091304?v=3&s=460";
         }
 
