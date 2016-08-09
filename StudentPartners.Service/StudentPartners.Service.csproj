@@ -184,6 +184,7 @@
     <Compile Include="App_Start\Startup.MobileApp.cs" />
     <Compile Include="Controllers\StudentPartnerController.cs" />
     <Compile Include="Controllers\TimelineItemController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataObjects\Address.cs" />
     <Compile Include="DataObjects\Comment.cs" />
     <Compile Include="DataObjects\StudentPartner.cs" />
