@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage x:Class="StudentPartners.Views.TimelinePage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:StudentPartners.Controls;assembly=StudentPartners"
-             x:Class="StudentPartners.Views.TimelinePage"
              Title="Timeline">
-  <ContentPage.Content>
-    <ListView HasUnevenRows="True"
-              IsPullToRefreshEnabled="True"
-              IsRefreshing="{Binding IsBusy,
+    <ContentPage.Content>
+        <ListView HasUnevenRows="True"
+                  IsPullToRefreshEnabled="True"
+                  IsRefreshing="{Binding IsBusy,
                                          Mode=OneWay}"
-              ItemsSource="{Binding TimelineItems}"
-              RefreshCommand="{Binding RefreshCommand}"
-              SeparatorVisibility="None">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <local:CardViewCell Detail="{Binding Author.Name}"
-                              ImageSource="{Binding PhotoUrl}"
-                              Text="{Binding Text}" />
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </ContentPage.Content>
+                  ItemsSource="{Binding TimelineItems}"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:CardViewCell Detail="{Binding Author.Name}"
+                                        ImageSource="{Binding PhotoUrl}"
+                                        Text="{Binding Text}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
