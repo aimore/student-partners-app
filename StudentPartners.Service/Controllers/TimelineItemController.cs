@@ -9,6 +9,7 @@ using StudentPartners.Service.Models;
 
 namespace StudentPartners.Service.Controllers
 {
+    [Authorize]
     public class TimelineItemController : TableController<TimelineItem>
     {
         protected override void Initialize(HttpControllerContext controllerContext)

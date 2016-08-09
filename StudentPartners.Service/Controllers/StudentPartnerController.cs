@@ -9,6 +9,7 @@ using StudentPartners.Service.Models;
 
 namespace StudentPartners.Service.Controllers
 {
+    [Authorize]
     public class StudentPartnerController : TableController<StudentPartner>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
