@@ -6,6 +6,7 @@ using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
 using StudentPartners.Service.DataObjects;
 using StudentPartners.Service.Models;
+using StudentPartners.Service.Helpers;
 
 namespace StudentPartners.Service.Controllers
 {
@@ -19,13 +20,13 @@ namespace StudentPartners.Service.Controllers
             DomainManager = new EntityDomainManager<TimelineItem>(context, Request);
         }
 
-        // GET tables/TimelineItem
+        [ExpandProperty("Author,Comments")]
         public IQueryable<TimelineItem> GetAllTimelineItem()
         {
             return Query(); 
         }
 
-        // GET tables/TimelineItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        [ExpandProperty("Author,Comments")]
         public SingleResult<TimelineItem> GetTimelineItem(string id)
         {
             return Lookup(id);
