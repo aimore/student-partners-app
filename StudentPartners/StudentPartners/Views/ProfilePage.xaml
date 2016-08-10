@@ -13,7 +13,7 @@
         <Label Text="Pierce has built mobile applications with Xamarin since 2011 and is the author of several popular open source applications, including Moments, a Snapchat clone for iOS and Android built with Xamarin.Forms and Microsoft Azure. In 2012, he began working at Xamarin and now works as a Program Manager at Microsoft for Xamarin." />
       </StackLayout>
       <StackLayout VerticalOptions="EndAndExpand">
-        <Button Text="Edit Profile" />
+        <Button x:Name="editProfile" Text="Edit Profile" />
       </StackLayout>
   </StackLayout>
 </ContentPage>
