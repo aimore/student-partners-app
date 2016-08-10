@@ -12,7 +12,16 @@ namespace StudentPartners.Views
     {
         public ProfilePage()
         {
-            InitializeComponent();
+			InitializeComponent();
         }
+
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+			this.editProfile.Clicked += (sender, e) =>
+			{
+				Navigation.PushAsync(new EditProfilePage(), true);
+			};
+		}
     }
 }
