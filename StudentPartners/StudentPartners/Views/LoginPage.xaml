@@ -2,7 +2,7 @@
 <ContentPage x:Class="StudentPartners.Views.LoginPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Background="LoginBackground.png">
+             BackgroundImage="LoginBackground.png">
     <StackLayout HorizontalOptions="CenterAndExpand"
                  Padding="10,0,10,0"
                  Spacing="25"
