@@ -7,6 +7,7 @@ using StudentPartners.Views;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using StudentPartners.Helpers;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace StudentPartners
@@ -17,7 +18,10 @@ namespace StudentPartners
         {
             InitializeComponent();
 
-            MainPage = new RootPage();
+            if (Settings.IsLoggedIn)
+                MainPage = new RootPage();
+            else
+                MainPage = new LoginPage();
         }
 
         protected override void OnStart()
