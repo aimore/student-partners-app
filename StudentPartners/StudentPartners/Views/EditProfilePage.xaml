@@ -24,7 +24,7 @@
 					</StackLayout>
 				</StackLayout>
 			</StackLayout>
-			<StackLayout Padding="20,0,20,0">
+			<StackLayout Padding="20,0,20,50">
 				<Label Text="PERSONAL INFORMATION"></Label>
 				<StackLayout Orientation="Horizontal">
 					<BoxView BackgroundColor="Red"></BoxView>
@@ -37,6 +37,22 @@
 				<StackLayout Orientation="Horizontal">
 					<BoxView BackgroundColor="Red"></BoxView>
 					<Entry HorizontalOptions="FillAndExpand" Placeholder="Gender"></Entry>
+				</StackLayout>
+			</StackLayout>
+			<StackLayout Padding="20,0,20,0">
+				<Label Text="SHIPPING INFORMATION"></Label>
+				<StackLayout Orientation="Horizontal">
+					<BoxView BackgroundColor="Red"></BoxView>
+					<Entry HorizontalOptions="FillAndExpand" Placeholder="Street"></Entry>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<BoxView BackgroundColor="Red"></BoxView>
+					<Entry HorizontalOptions="Start" Placeholder="ZIP Code"></Entry>
+					<Entry HorizontalOptions="FillAndExpand" Placeholder="City"></Entry>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<BoxView BackgroundColor="Red"></BoxView>
+					<Entry HorizontalOptions="FillAndExpand" Placeholder="Country"></Entry>
 				</StackLayout>
 			</StackLayout>
 		</StackLayout>
