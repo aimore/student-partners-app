@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="StudentPartners.Views.LoginPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="LoginBackground.png">
+    <StackLayout HorizontalOptions="CenterAndExpand"
+                 Padding="10,0,10,0"
+                 Spacing="25"
+                 VerticalOptions="Center">
+        <Label FontSize="42"
+               HorizontalTextAlignment="Center"
+               Text="Xamarin Student Partners"
+               TextColor="White" />
+        <Button BackgroundColor="White"
+                Command="{Binding LoginCommand}"
+                Text="Login with Azure AD"
+                TextColor="Black" />
+    </StackLayout>
+</ContentPage>

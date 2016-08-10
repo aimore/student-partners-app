@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="StudentPartners.Views.MenuPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             Title="Xamarin Student Partners">
+    <ContentPage.Content>
+        <ListView x:Name="ListViewMenu"
+                  CachingStrategy="RecycleElement"
+                  HasUnevenRows="True"
+                  SeparatorColor="Transparent">
+            <ListView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+
+                    <BoxView Grid.RowSpan="4"
+                             Grid.ColumnSpan="3"
+                             BackgroundColor="#1976D2" />
+                    <controls:CircleImage Grid.Row="1"
+                                          Grid.Column="1"
+                                          HeightRequest="125"
+                                          HorizontalOptions="Center"
+                                          Source="https://avatars3.githubusercontent.com/u/1091304?v=3"
+                                          VerticalOptions="End"
+                                          WidthRequest="125" />
+                    <Label Grid.Row="2"
+                           Grid.Column="1"
+                           FontSize="28"
+                           Text="Pierce Boggan"
+                           TextColor="White" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image HeightRequest="25"
+                                   Source="{Binding Icon}"
+                                   WidthRequest="25" />
+                            <Label Grid.Column="1"
+                                   FontSize="22"
+                                   Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
