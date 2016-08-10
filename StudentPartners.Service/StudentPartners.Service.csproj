@@ -189,6 +189,7 @@
     <Compile Include="DataObjects\Comment.cs" />
     <Compile Include="DataObjects\StudentPartner.cs" />
     <Compile Include="DataObjects\TimelineItem.cs" />
+    <Compile Include="Helpers\ExpandPropertyAttribute.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
