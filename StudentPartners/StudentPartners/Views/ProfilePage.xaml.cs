@@ -10,18 +10,16 @@ namespace StudentPartners.Views
 {
     public partial class ProfilePage : ContentPage
     {
+		private EditProfilePage _editProfilePage = new EditProfilePage();
+
         public ProfilePage()
         {
 			InitializeComponent();
-        }
 
-		protected override void OnAppearing()
-		{
-			base.OnAppearing();
 			this.editProfile.Clicked += (sender, e) =>
 			{
-				Navigation.PushAsync(new EditProfilePage(), true);
+				Navigation.PushAsync(_editProfilePage, true);
 			};
-		}
+        }
     }
 }
