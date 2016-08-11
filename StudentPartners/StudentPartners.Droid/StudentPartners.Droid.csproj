@@ -163,6 +163,8 @@
     <AndroidResource Include="Resources\drawable-xhdpi\editGenderIcon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\editPhoneIcon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\editStreetIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editStateIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editStateIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

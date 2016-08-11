@@ -132,6 +132,8 @@
     <BundleResource Include="Resources\editPhoneIcon%402x.png" />
     <BundleResource Include="Resources\editStreetIcon.png" />
     <BundleResource Include="Resources\editStreetIcon%402x.png" />
+    <BundleResource Include="Resources\editStateIcon.png" />
+    <BundleResource Include="Resources\editStateIcon%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.Settings, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">

@@ -10,7 +10,8 @@
 					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
 						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
 							<Image Source="editNameIcon"></Image>
-							<Entry HorizontalOptions="FillAndExpand" Placeholder="Name"></Entry>
+							<Entry HorizontalOptions="FillAndExpand" Placeholder="First Name"></Entry>
+							<Entry HorizontalOptions="FillAndExpand" Placeholder="Last Name"></Entry>
 						</StackLayout>
 						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
 							<Image Source="editWebsiteIcon"></Image>
@@ -22,8 +23,8 @@
 						</StackLayout>
 					</StackLayout>
 					<StackLayout Padding="10,0,0,0">
-						<BoxView BackgroundColor="Green" WidthRequest="100" HeightRequest="100"></BoxView>
-						<Label VerticalOptions="End" Text="Edit" HorizontalTextAlignment="Center"></Label>
+						<BoxView BackgroundColor="#C8C8C8" WidthRequest="100" HeightRequest="100"></BoxView>
+						<Label VerticalOptions="End" TextColor="#1194F6" Text="Edit" HorizontalTextAlignment="Center"></Label>
 					</StackLayout>
 				</StackLayout>
 			</StackLayout>
@@ -46,12 +47,19 @@
 				<Label Text="SHIPPING INFORMATION"></Label>
 				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
 					<Image Source="editStreetIcon"></Image>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="Street"></Entry>
+					<StackLayout HorizontalOptions="FillAndExpand">
+						<Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 1"></Entry>
+						<Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 2"></Entry>
+					</StackLayout>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
 					<Image Source="editCityIcon"></Image>
 					<Entry HorizontalOptions="Start" Placeholder="ZIP Code"></Entry>
 					<Entry HorizontalOptions="FillAndExpand" Placeholder="City"></Entry>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editStateIcon"></Image>
+					<Entry HorizontalOptions="FillAndExpand" Placeholder="State"></Entry>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
 					<Image Source="editCountryIcon"></Image>
