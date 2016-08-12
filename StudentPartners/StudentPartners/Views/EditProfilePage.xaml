@@ -1,71 +1,81 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StudentPartners.EditProfilePage" Title="Edit Profile">
-	<ContentPage.ToolbarItems>
-		<ToolbarItem Name="Save"></ToolbarItem>
-	</ContentPage.ToolbarItems>
-	<ContentPage.Content>
-		<StackLayout>
-			<StackLayout Padding="20,20,20,50">
-				<StackLayout Orientation="Horizontal">
-					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-							<Image Source="editNameIcon"></Image>
-							<Entry HorizontalOptions="FillAndExpand" Placeholder="First Name"></Entry>
-							<Entry HorizontalOptions="FillAndExpand" Placeholder="Last Name"></Entry>
-						</StackLayout>
-						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-							<Image Source="editWebsiteIcon"></Image>
-							<Entry HorizontalOptions="FillAndExpand" Placeholder="Website/Blog"></Entry>
-						</StackLayout>
-						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-							<Image Source="editBioIcon"></Image>
-							<Entry HorizontalOptions="FillAndExpand" Placeholder="Bio"></Entry>
-						</StackLayout>
-					</StackLayout>
-					<StackLayout Padding="10,0,0,0">
-						<BoxView BackgroundColor="#C8C8C8" WidthRequest="100" HeightRequest="100"></BoxView>
-						<Label VerticalOptions="End" TextColor="#1194F6" Text="Edit" HorizontalTextAlignment="Center"></Label>
-					</StackLayout>
-				</StackLayout>
-			</StackLayout>
-			<StackLayout Padding="20,0,20,50">
-				<Label Text="PERSONAL INFORMATION"></Label>
-				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-					<Image Source="editEmailIcon"></Image>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="E-Mail"></Entry>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-					<Image Source="editPhoneIcon"></Image>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="Phone Number"></Entry>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-					<Image Source="editGenderIcon"></Image>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="Gender"></Entry>
-				</StackLayout>
-			</StackLayout>
-			<StackLayout Padding="20,0,20,0">
-				<Label Text="SHIPPING INFORMATION"></Label>
-				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-					<Image Source="editStreetIcon"></Image>
-					<StackLayout HorizontalOptions="FillAndExpand">
-						<Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 1"></Entry>
-						<Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 2"></Entry>
-					</StackLayout>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-					<Image Source="editCityIcon"></Image>
-					<Entry HorizontalOptions="Start" Placeholder="ZIP Code"></Entry>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="City"></Entry>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-					<Image Source="editStateIcon"></Image>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="State"></Entry>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
-					<Image Source="editCountryIcon"></Image>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="Country"></Entry>
-				</StackLayout>
-			</StackLayout>
-		</StackLayout>
-	</ContentPage.Content>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="StudentPartners.EditProfilePage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Edit Profile">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Save" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Padding="20,20,20,50">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                            <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                                <Image Source="editNameIcon" />
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="First Name" />
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Last Name" />
+                            </StackLayout>
+                            <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                                <Image Source="editWebsiteIcon" />
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Website/Blog" />
+                            </StackLayout>
+                            <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                                <Image Source="editBioIcon" />
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Bio" />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="10,0,0,0">
+                            <BoxView BackgroundColor="#C8C8C8"
+                                     HeightRequest="100"
+                                     WidthRequest="100" />
+                            <Label HorizontalTextAlignment="Center"
+                                   Text="Edit"
+                                   TextColor="#1194F6"
+                                   VerticalOptions="End" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Padding="20,0,20,50">
+                    <Label Text="PERSONAL INFORMATION" />
+                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                        <Image Source="editEmailIcon" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="E-Mail" />
+                    </StackLayout>
+                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                        <Image Source="editPhoneIcon" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Phone Number" />
+                    </StackLayout>
+                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                        <Image Source="editGenderIcon" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Gender" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Padding="20,0,20,0">
+                    <Label Text="SHIPPING INFORMATION" />
+                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                        <Image Source="editStreetIcon" />
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 1" />
+                            <Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 2" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                        <Image Source="editCityIcon" />
+                        <Entry HorizontalOptions="Start" Placeholder="ZIP Code" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="City" />
+                    </StackLayout>
+                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                        <Image Source="editStateIcon" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="State" />
+                    </StackLayout>
+                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
+                        <Image Source="editCountryIcon" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Country" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
