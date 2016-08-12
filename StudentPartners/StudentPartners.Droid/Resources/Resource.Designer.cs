@@ -26,6 +26,7 @@ namespace StudentPartners.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::AppServiceHelpers.Ext.Android.Resource.String.library_name = global::StudentPartners.Droid.Resource.String.library_name;
 			global::HockeyApp.Resource.Color.hockeyapp_background_header = global::StudentPartners.Droid.Resource.Color.hockeyapp_background_header;
 			global::HockeyApp.Resource.Color.hockeyapp_background_light = global::StudentPartners.Droid.Resource.Color.hockeyapp_background_light;
 			global::HockeyApp.Resource.Color.hockeyapp_background_white = global::StudentPartners.Droid.Resource.Color.hockeyapp_background_white;
