@@ -49,7 +49,12 @@
                     </StackLayout>
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editGenderIcon" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Gender" />
+                      <Picker Title="Gender" HorizontalOptions="FillAndExpand">
+                        <Picker.Items>
+                          <x:String>Male</x:String>
+                          <x:String>Female</x:String>
+                        </Picker.Items>
+                      </Picker>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Padding="20,0,20,0">
