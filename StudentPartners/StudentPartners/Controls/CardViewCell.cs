@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentPartners.Models;
+using System;
 
 using Xamarin.Forms;
 
@@ -99,11 +100,12 @@ namespace StudentPartners.Controls
 
         protected override void OnBindingContextChanged()
         {
-            if (BindingContext != null)
+            var bindingContext = BindingContext as StudentPartner;
+            if (bindingContext != null)
             {
-                textLabel.Text = (string)GetValue(TextProperty);
-                detailTextLabel.Text = (string)GetValue(DetailProperty);
-                image.Source = (ImageSource)GetValue(ImageSourceProperty);
+                textLabel.Text = bindingContext.Name;
+                detailTextLabel.Text = bindingContext.Address.Country;
+                image.Source = bindingContext.PhotoUrl;
             }
 
             base.OnBindingContextChanged();

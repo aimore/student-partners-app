@@ -5,13 +5,14 @@
              xmlns:local="clr-namespace:StudentPartners.Controls;aseembly=StudentPartners"
              Title="Student Partners">
     <ContentPage.Content>
-        <ListView HasUnevenRows="True"
+        <ListView CachingStrategy="RecycleElement"
+                  HasUnevenRows="True"
                   IsPullToRefreshEnabled="True"
                   IsRefreshing="{Binding IsBusy,
                                          Mode=OneWay}"
-                  SelectedItem="{Binding SelectedItem}"
                   ItemsSource="{Binding StudentPartners}"
                   RefreshCommand="{Binding RefreshCommand}"
+                  SelectedItem="{Binding SelectedItem}"
                   SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
