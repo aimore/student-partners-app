@@ -19,11 +19,11 @@
                             </StackLayout>
                             <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                                 <Image Source="editWebsiteIcon" />
-                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Website/Blog" />
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Website" />
                             </StackLayout>
                             <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                                 <Image Source="editBioIcon" />
-                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Bio" />
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Biography" />
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Padding="10,0,0,0">
