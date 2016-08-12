@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPartners", "StudentP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentPartners.Service", "StudentPartners.Service\StudentPartners.Service.csproj", "{889E6C2A-1C8D-42BE-8F79-E1FEE8EF4080}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Targets", "Targets", "{78317342-7B51-4B2A-8F0D-D3B402E70DD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -304,5 +306,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D2D6694-21F2-4D8C-AF1E-90F962C16448} = {78317342-7B51-4B2A-8F0D-D3B402E70DD4}
+		{01600FB6-1658-4E00-85A3-281380684F7F} = {78317342-7B51-4B2A-8F0D-D3B402E70DD4}
+		{A4B1A2F4-4C03-43F1-9DCC-58AABC5E75AB} = {78317342-7B51-4B2A-8F0D-D3B402E70DD4}
 	EndGlobalSection
 EndGlobal
