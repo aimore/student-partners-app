@@ -25,6 +25,8 @@ namespace StudentPartners.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            Xamarin.Insights.Initialize("7192b141f99a9ac22d0dfd02ac5e114f56cbeb08");
+
             return base.FinishedLaunching(app, options);
         }
     }

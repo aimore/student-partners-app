@@ -23,6 +23,7 @@ namespace StudentPartners.Droid
             base.OnCreate(bundle);
 
             CrashManager.Register(this, HOCKEYAPP_ID);
+            Xamarin.Insights.Initialize("7192b141f99a9ac22d0dfd02ac5e114f56cbeb08", this);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
