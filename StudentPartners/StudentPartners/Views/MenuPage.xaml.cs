@@ -30,7 +30,8 @@ namespace StudentPartners.Views
             ListViewMenu.ItemsSource = menuItems = new List<HomeMenuItem>
             {       new HomeMenuItem { Title = "Timeline", MenuType = MenuType.Timeline, Icon ="about.png" },
                     new HomeMenuItem { Title = "Student Partners", MenuType = MenuType.StudentPartners, Icon = "blog.png" },
-                    new HomeMenuItem { Title = "Profile", MenuType = MenuType.Profile, Icon = "twitternav.png" }
+                    new HomeMenuItem { Title = "Profile", MenuType = MenuType.Profile, Icon = "twitternav.png" },
+					new HomeMenuItem { Title = "Info", MenuType = MenuType.Info}
             };
 
             ListViewMenu.SelectedItem = menuItems[0];

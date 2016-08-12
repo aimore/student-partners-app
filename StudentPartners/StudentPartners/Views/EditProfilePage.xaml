@@ -1,57 +1,68 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="StudentPartners.EditProfilePage" Title="Edit Profile">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Name="Save"></ToolbarItem>
+	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
 		<StackLayout>
 			<StackLayout Padding="20,20,20,50">
 				<StackLayout Orientation="Horizontal">
 					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-						<StackLayout Orientation="Horizontal">
-							<BoxView BackgroundColor="Red"></BoxView>
-							<Entry HorizontalOptions="FillAndExpand" Placeholder="Name"></Entry>
+						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+							<Image Source="editNameIcon"></Image>
+							<Entry HorizontalOptions="FillAndExpand" Placeholder="First Name"></Entry>
+							<Entry HorizontalOptions="FillAndExpand" Placeholder="Last Name"></Entry>
 						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<BoxView BackgroundColor="Red"></BoxView>
+						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+							<Image Source="editWebsiteIcon"></Image>
 							<Entry HorizontalOptions="FillAndExpand" Placeholder="Website/Blog"></Entry>
 						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<BoxView BackgroundColor="Red"></BoxView>
+						<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+							<Image Source="editBioIcon"></Image>
 							<Entry HorizontalOptions="FillAndExpand" Placeholder="Bio"></Entry>
 						</StackLayout>
 					</StackLayout>
 					<StackLayout Padding="10,0,0,0">
-						<BoxView BackgroundColor="Green" WidthRequest="100" HeightRequest="100"></BoxView>
-						<Label VerticalOptions="End" Text="Edit" HorizontalTextAlignment="Center"></Label>
+						<BoxView BackgroundColor="#C8C8C8" WidthRequest="100" HeightRequest="100"></BoxView>
+						<Label VerticalOptions="End" TextColor="#1194F6" Text="Edit" HorizontalTextAlignment="Center"></Label>
 					</StackLayout>
 				</StackLayout>
 			</StackLayout>
 			<StackLayout Padding="20,0,20,50">
 				<Label Text="PERSONAL INFORMATION"></Label>
-				<StackLayout Orientation="Horizontal">
-					<BoxView BackgroundColor="Red"></BoxView>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editEmailIcon"></Image>
 					<Entry HorizontalOptions="FillAndExpand" Placeholder="E-Mail"></Entry>
 				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<BoxView BackgroundColor="Red"></BoxView>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editPhoneIcon"></Image>
 					<Entry HorizontalOptions="FillAndExpand" Placeholder="Phone Number"></Entry>
 				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<BoxView BackgroundColor="Red"></BoxView>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editGenderIcon"></Image>
 					<Entry HorizontalOptions="FillAndExpand" Placeholder="Gender"></Entry>
 				</StackLayout>
 			</StackLayout>
 			<StackLayout Padding="20,0,20,0">
 				<Label Text="SHIPPING INFORMATION"></Label>
-				<StackLayout Orientation="Horizontal">
-					<BoxView BackgroundColor="Red"></BoxView>
-					<Entry HorizontalOptions="FillAndExpand" Placeholder="Street"></Entry>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editStreetIcon"></Image>
+					<StackLayout HorizontalOptions="FillAndExpand">
+						<Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 1"></Entry>
+						<Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 2"></Entry>
+					</StackLayout>
 				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<BoxView BackgroundColor="Red"></BoxView>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editCityIcon"></Image>
 					<Entry HorizontalOptions="Start" Placeholder="ZIP Code"></Entry>
 					<Entry HorizontalOptions="FillAndExpand" Placeholder="City"></Entry>
 				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<BoxView BackgroundColor="Red"></BoxView>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editStateIcon"></Image>
+					<Entry HorizontalOptions="FillAndExpand" Placeholder="State"></Entry>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0,2,0,2">
+					<Image Source="editCountryIcon"></Image>
 					<Entry HorizontalOptions="FillAndExpand" Placeholder="Country"></Entry>
 				</StackLayout>
 			</StackLayout>

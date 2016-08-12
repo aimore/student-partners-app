@@ -145,6 +145,26 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editNameIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editNameIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editWebsiteIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editWebsiteIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editBioIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editCityIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editCountryIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editEmailIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editGenderIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editPhoneIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editStreetIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editBioIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editCityIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editCountryIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editEmailIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editGenderIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editPhoneIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editStreetIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\editStateIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\editStateIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
