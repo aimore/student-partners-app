@@ -19,7 +19,7 @@
                             </StackLayout>
                             <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                                 <Image Source="editWebsiteIcon" />
-                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Website" />
+                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Website" Keyboard="Url" />
                             </StackLayout>
                             <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                                 <Image Source="editBioIcon" />
@@ -41,11 +41,11 @@
                     <Label Text="PERSONAL INFORMATION" />
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editEmailIcon" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="E-Mail" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Email" Keyboard="Email" />
                     </StackLayout>
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editPhoneIcon" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Phone Number" />
+                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Phone Number" Keyboard="Telephone" />
                     </StackLayout>
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editGenderIcon" />
