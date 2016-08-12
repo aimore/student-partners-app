@@ -12,7 +12,7 @@
             <Label FontSize="16"
                    Text="Biography"
                    TextColor="#030303" />
-            <Label Text="{Binding Biography}" />
+            <Label Text="{Binding StudentPartner.Biography}" />
         </StackLayout>
     </StackLayout>
 </ContentPage>
