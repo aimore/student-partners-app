@@ -43,6 +43,9 @@ namespace StudentPartners.Views
                     case MenuType.Profile:
                         Pages.Add(id, new NavigationPage(new ProfilePage()));
                         break;
+					case MenuType.Info:
+						Pages.Add(id, new NavigationPage(new InfoPage()));
+						break;
                 }
             }
 

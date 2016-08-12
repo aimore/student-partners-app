@@ -114,6 +114,26 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\editNameIcon.png" />
+    <BundleResource Include="Resources\editNameIcon%402x.png" />
+    <BundleResource Include="Resources\editWebsiteIcon.png" />
+    <BundleResource Include="Resources\editWebsiteIcon%402x.png" />
+    <BundleResource Include="Resources\editBioIcon.png" />
+    <BundleResource Include="Resources\editBioIcon%402x.png" />
+    <BundleResource Include="Resources\editCityIcon.png" />
+    <BundleResource Include="Resources\editCityIcon%402x.png" />
+    <BundleResource Include="Resources\editCountryIcon.png" />
+    <BundleResource Include="Resources\editCountryIcon%402x.png" />
+    <BundleResource Include="Resources\editEmailIcon.png" />
+    <BundleResource Include="Resources\editEmailIcon%402x.png" />
+    <BundleResource Include="Resources\editGenderIcon.png" />
+    <BundleResource Include="Resources\editGenderIcon%402x.png" />
+    <BundleResource Include="Resources\editPhoneIcon.png" />
+    <BundleResource Include="Resources\editPhoneIcon%402x.png" />
+    <BundleResource Include="Resources\editStreetIcon.png" />
+    <BundleResource Include="Resources\editStreetIcon%402x.png" />
+    <BundleResource Include="Resources\editStateIcon.png" />
+    <BundleResource Include="Resources\editStateIcon%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.Settings, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">

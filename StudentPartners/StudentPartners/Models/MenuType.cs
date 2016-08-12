@@ -10,6 +10,7 @@ namespace StudentPartners.Models
     {
         Timeline,
         StudentPartners,
-        Profile
+        Profile,
+		Info
     }
 }
