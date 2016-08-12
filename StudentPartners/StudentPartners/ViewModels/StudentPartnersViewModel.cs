@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using StudentPartners.Models;
 
 using Xamarin.Forms;
+using StudentPartners.Helpers;
 
 namespace StudentPartners.ViewModels
 {
@@ -57,7 +58,7 @@ namespace StudentPartners.ViewModels
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"ERROR: {ex.Message}");
+                 Logger.Report(ex);
             }
             finally
             {

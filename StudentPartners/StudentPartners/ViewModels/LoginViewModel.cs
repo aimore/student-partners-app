@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentPartners.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace StudentPartners.ViewModels
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"ERROR: {ex.Message}");
+                Logger.Report(ex);
             }
             finally
             {
