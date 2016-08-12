@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="StudentPartners.Views.StudentPartnersDetailPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StudentPartners.Controls;"
+             Title="Detail">
+    <StackLayout BackgroundColor="White">
+        <local:CardView Detail="{Binding StudentPartner.Address.Country}"
+                        ImageSource="{Binding StudentPartner.PhotoUrl}"
+                        Text="{Binding StudentPartner.Name}" />
+        <StackLayout Padding="10,10,10,10">
+            <Label FontSize="16"
+                   Text="Biography"
+                   TextColor="#030303" />
+            <Label Text="{Binding Biography}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

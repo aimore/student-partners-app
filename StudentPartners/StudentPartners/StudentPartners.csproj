@@ -41,7 +41,6 @@
     <Compile Include="Controls\CardView.cs" />
     <Compile Include="Controls\CardViewCell.cs" />
     <Compile Include="Controls\TimelineItemCell.cs" />
-    <Compile Include="Helpers\ILogger.cs" />
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -57,6 +56,7 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MenuPageViewModel.cs" />
+    <Compile Include="ViewModels\StudentPartnersDetailViewModel.cs" />
     <Compile Include="ViewModels\StudentPartnersViewModel.cs" />
     <Compile Include="ViewModels\TimelineViewModel.cs" />
     <Compile Include="Views\LoginPage.xaml.cs">
@@ -69,6 +69,9 @@
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RootPage.cs" />
+    <Compile Include="Views\StudentPartnersDetailPage.xaml.cs">
+      <DependentUpon>StudentPartnersDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StudentPartnersPage.xaml.cs">
       <DependentUpon>StudentPartnersPage.xaml</DependentUpon>
     </Compile>
@@ -77,9 +80,6 @@
     </Compile>
     <Compile Include="Views\EditProfilePage.xaml.cs">
       <DependentUpon>EditProfilePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\InfoPage.xaml.cs">
-      <DependentUpon>InfoPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -92,9 +92,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\EditProfilePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\InfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -157,6 +154,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\TimelinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\StudentPartnersDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

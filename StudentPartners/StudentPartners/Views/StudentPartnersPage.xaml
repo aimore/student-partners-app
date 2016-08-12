@@ -9,6 +9,7 @@
                   IsPullToRefreshEnabled="True"
                   IsRefreshing="{Binding IsBusy,
                                          Mode=OneWay}"
+                  SelectedItem="{Binding SelectedItem}"
                   ItemsSource="{Binding StudentPartners}"
                   RefreshCommand="{Binding RefreshCommand}"
                   SeparatorVisibility="None">

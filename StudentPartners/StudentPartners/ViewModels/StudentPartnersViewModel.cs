@@ -9,15 +9,19 @@ using StudentPartners.Models;
 
 using Xamarin.Forms;
 using StudentPartners.Helpers;
+using StudentPartners.Views;
 
 namespace StudentPartners.ViewModels
 {
     public class StudentPartnersViewModel : BaseViewModel
     {
         public ObservableCollection<StudentPartner> StudentPartners { get; set; }
+        Page page;
 
-        public StudentPartnersViewModel()
+        public StudentPartnersViewModel(Page page)
         {
+            this.page = page;
+
             var address = new Address
             {
                 Attention = "Xamarin, Inc.",
@@ -37,6 +41,9 @@ namespace StudentPartners.ViewModels
                 new StudentPartner { FirstName = "James", LastName = "Montemagno", Address = address, PhotoUrl = "http://www.gravatar.com/avatar/7d1f32b86a6076963e7beab73dddf7ca?s=256" },
                 new StudentPartner { FirstName = "Pierce", LastName = "Boggan", Address = address, PhotoUrl = "https://avatars3.githubusercontent.com/u/1091304?v=3&s=460" },
             };
+
+            foreach (var sp in StudentPartners)
+                sp.Biography = "Pierce has built mobile applications with Xamarin since 2011 and is the author of several popular open source applications, including Moments, a Snapchat clone for iOS and Android built with Xamarin.Forms and Microsoft Azure. In 2012, he began working at Xamarin and now works as a Program Manager at Microsoft for Xamarin.";
         }
 
         Command refreshCommand;
@@ -64,6 +71,24 @@ namespace StudentPartners.ViewModels
             {
                 IsBusy = false;
             }
+        }
+
+        StudentPartner selectedItem;
+        public StudentPartner SelectedItem
+        {
+            set
+            {
+                selectedItem = value;
+                OnPropertyChanged("SelectedItem");
+
+                if (selectedItem != null)
+                {
+                    page.Navigation.PushAsync(new StudentPartnersDetailPage(selectedItem));
+
+                    SelectedItem = null;
+                }
+            }
+            get { return selectedItem; }
         }
     }
 }

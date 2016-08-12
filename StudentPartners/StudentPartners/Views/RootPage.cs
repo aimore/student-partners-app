@@ -34,18 +34,19 @@ namespace StudentPartners.Views
             {
                 switch (id)
                 {
-                    case MenuType.Timeline:
+                    /*case MenuType.Timeline:
                         Pages.Add(id, new NavigationPage(new TimelinePage()));
-                        break;
+                        break;*/
                     case MenuType.StudentPartners:
                         Pages.Add(id, new NavigationPage(new StudentPartnersPage()));
                         break;
                     case MenuType.Profile:
                         Pages.Add(id, new NavigationPage(new ProfilePage()));
                         break;
+                        /*
 					case MenuType.Info:
 						Pages.Add(id, new NavigationPage(new InfoPage()));
-						break;
+						break;*/
                 }
             }
 
