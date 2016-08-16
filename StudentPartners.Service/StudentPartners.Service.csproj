@@ -210,6 +210,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\studentpartners - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\studentpartners - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\xamarinstudentpartners - Web Deploy.pubxml" />
   </ItemGroup>

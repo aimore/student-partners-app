@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 
 using HockeyApp.Android;
+using Android.Content;
 
 namespace StudentPartners.Droid
 {
@@ -26,10 +27,12 @@ namespace StudentPartners.Droid
             Xamarin.Insights.Initialize("7192b141f99a9ac22d0dfd02ac5e114f56cbeb08", this);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            AppServiceHelpers.CurrentPlatform.Init(Xamarin.Forms.Forms.Context);
             LoadApplication(new App());
 
             CheckForUpdates();
         }
+        
 
         protected override void OnPause()
         {

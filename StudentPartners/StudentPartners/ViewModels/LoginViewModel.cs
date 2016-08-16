@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AppServiceHelpers;
 using Xamarin.Forms;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace StudentPartners.ViewModels
 {
@@ -26,7 +28,7 @@ namespace StudentPartners.ViewModels
 
             try
             {
-                // Log the user in!
+                var result = await EasyMobileServiceClient.Current.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
             }
             catch (Exception ex)
             {

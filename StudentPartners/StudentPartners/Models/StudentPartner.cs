@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AppServiceHelpers.Models;
+
 namespace StudentPartners.Models
 {
-    public class StudentPartner
+    public class StudentPartner : EntityData
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
