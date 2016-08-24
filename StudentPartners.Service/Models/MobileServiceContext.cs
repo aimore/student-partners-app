@@ -36,5 +36,9 @@ namespace StudentPartners.Service.Models
         public System.Data.Entity.DbSet<StudentPartners.Service.DataObjects.StudentPartner> StudentPartners { get; set; }
 
         public System.Data.Entity.DbSet<StudentPartners.Service.DataObjects.TimelineItem> TimelineItems { get; set; }
+
+        public System.Data.Entity.DbSet<StudentPartners.Service.DataObjects.Address> Addresses { get; set; }
+
+        public System.Data.Entity.DbSet<StudentPartners.Service.DataObjects.Comment> Comments { get; set; }
     }
 }

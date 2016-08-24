@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AppServiceHelpers;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
+using StudentPartners.Models;
 
 namespace StudentPartners.Helpers
 {
@@ -19,6 +21,8 @@ namespace StudentPartners.Helpers
             }
         }
 
+        public static StudentPartner StudentPartner { get; set; }
+
         #region Setting Constants
         private const string LoggedInKey = "logged_in";
 
@@ -31,9 +35,8 @@ namespace StudentPartners.Helpers
         public const string PhotoUrlKey = "photo_url";
         private static readonly string PhotoUrlDefault = "https://secure.gravatar.com/avatar/62921d835f6d165597ff0dcd40fd2664?s=260&d=mm&r=g";
         #endregion
-
-        // TODO: Replace with ASH to check if logged in.
-        public static bool IsLoggedIn => true;
+        
+        public static bool IsLoggedIn => EasyMobileServiceClient.Current.MobileService.CurrentUser.UserId != null;
 
         public static string FirstName
         {

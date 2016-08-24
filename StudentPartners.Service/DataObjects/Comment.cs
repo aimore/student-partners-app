@@ -8,7 +8,7 @@ using Microsoft.Azure.Mobile.Server;
 
 namespace StudentPartners.Service.DataObjects
 {
-    public class Comment
+    public class Comment : EntityData
     {
         public virtual StudentPartner Author { get; set; }
         public string Text { get; set; }

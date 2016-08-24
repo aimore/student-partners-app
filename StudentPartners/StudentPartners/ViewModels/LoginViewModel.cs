@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using AppServiceHelpers;
 using Xamarin.Forms;
 using Microsoft.WindowsAzure.MobileServices;
+using StudentPartners.Models;
+using StudentPartners.Views;
 
 namespace StudentPartners.ViewModels
 {
@@ -28,7 +30,18 @@ namespace StudentPartners.ViewModels
 
             try
             {
-                var result = await EasyMobileServiceClient.Current.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                var loginSuccessful = await EasyMobileServiceClient.Current.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
+                if (loginSuccessful)
+                {
+                    // Fetch additional information about our user.
+                    var studentPartner = await EasyMobileServiceClient.Current.MobileService.InvokeApiAsync<StudentPartner>("UserInfo", System.Net.Http.HttpMethod.Get, null);
+                    Settings.FirstName = studentPartner.FirstName;
+                    Settings.LastName = studentPartner.LastName;
+                    Settings.PhotoUrl = studentPartner.PhotoUrl;
+                    Settings.StudentPartner = studentPartner;
+
+                    Application.Current.MainPage = new RootPage();
+                }
             }
             catch (Exception ex)
             {
