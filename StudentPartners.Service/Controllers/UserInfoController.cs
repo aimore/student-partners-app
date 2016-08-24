@@ -34,7 +34,7 @@ namespace StudentPartners.Service.Controllers
             {
                 var firstName = credentials.UserClaims.FirstOrDefault(c => c.Type == ClaimTypes.GivenName)?.Value ?? string.Empty;
                 var lastName = credentials.UserClaims.FirstOrDefault(c => c.Type == ClaimTypes.Surname)?.Value ?? string.Empty;
-                var email = credentials.UserClaims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
+                var email = credentials.UserClaims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value ?? string.Empty;
                 var photoUrl = ComputeGravatarUrl(email);
 
                 currentUser = new StudentPartner
