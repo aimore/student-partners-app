@@ -1,14 +1,8 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 using HockeyApp.Android;
-using Android.Content;
 
 namespace StudentPartners.Droid
 {
@@ -33,7 +27,6 @@ namespace StudentPartners.Droid
             CheckForUpdates();
         }
         
-
         protected override void OnPause()
         {
             base.OnPause();

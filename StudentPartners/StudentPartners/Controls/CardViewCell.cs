@@ -104,8 +104,10 @@ namespace StudentPartners.Controls
             if (bindingContext != null)
             {
                 textLabel.Text = bindingContext.Name;
-                detailTextLabel.Text = bindingContext.Address.Country;
                 image.Source = bindingContext.PhotoUrl;
+
+                if (bindingContext.Address != null)
+                    detailTextLabel.Text = bindingContext.Address.Country;
             }
 
             base.OnBindingContextChanged();

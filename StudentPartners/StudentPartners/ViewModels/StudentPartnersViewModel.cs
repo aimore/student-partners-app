@@ -11,6 +11,8 @@ using Xamarin.Forms;
 using StudentPartners.Helpers;
 using StudentPartners.Views;
 
+using AppServiceHelpers;
+
 namespace StudentPartners.ViewModels
 {
     public class StudentPartnersViewModel : BaseViewModel
@@ -22,27 +24,8 @@ namespace StudentPartners.ViewModels
         {
             this.page = page;
 
-            var address = new Address
-            {
-                Attention = "Xamarin, Inc.",
-                AddressLine1 = "2 Park Plaza",
-                AddressLine2 = "7th Floor",
-                City = "Boston",
-                State = "Massachusetts",
-                ZipCode = "02116",
-                Country = "United States of America"
-            };
-
-            var biography = "Pierce has built mobile applications with Xamarin since 2011 and is the author of several popular open source applications, including Moments, a Snapchat clone for iOS and Android built with Xamarin.Forms and Microsoft Azure. In 2012, he began working at Xamarin and now works as a Program Manager at Microsoft for Xamarin.";
-        
-            StudentPartners = new ObservableCollection<StudentPartner>
-            {
-                new StudentPartner { FirstName = "Nat", LastName = "Friedman", Biography = biography, Address = address, PhotoUrl = "http://static4.businessinsider.com/image/559d359decad04574c42a3c4-480/xamarin-nat-friedman.jpg" },
-                new StudentPartner { FirstName = "Miguel", LastName = "de Icaza", Biography = biography, Address = address, PhotoUrl = "http://images.techhive.com/images/idge/imported/article/nww/2011/03/031111-deicaza-100272676-orig.jpg" },
-                new StudentPartner { FirstName = "Joseph", LastName = "Hill", Biography = biography, Address = address, PhotoUrl = "https://www.gravatar.com/avatar/f763ec6935726b7f7715808828e52223.jpg?s=256" },
-                new StudentPartner { FirstName = "James", LastName = "Montemagno", Biography = biography, Address = address, PhotoUrl = "http://www.gravatar.com/avatar/7d1f32b86a6076963e7beab73dddf7ca?s=256" },
-                new StudentPartner { FirstName = "Pierce", LastName = "Boggan", Biography = biography, Address = address, PhotoUrl = "https://avatars3.githubusercontent.com/u/1091304?v=3&s=460" },
-            };
+            StudentPartners = new ObservableCollection<StudentPartner>();
+            ExecuteRefreshCommandAsync();
         }
 
         Command refreshCommand;
@@ -60,7 +43,10 @@ namespace StudentPartners.ViewModels
 
             try
             {
-                // Pull down data from ASH.
+                var items = await EasyMobileServiceClient.Current.Table<StudentPartner>().GetItemsAsync();
+                StudentPartners.Clear();
+                foreach (var sp in items)
+                    StudentPartners.Add(sp);
             }
             catch (Exception ex)
             {
