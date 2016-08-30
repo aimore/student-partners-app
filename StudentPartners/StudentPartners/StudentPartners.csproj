@@ -79,6 +79,7 @@
       <DependentUpon>EditProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RootPageiOS.cs" />
+    <Compile Include="ViewModels\EditPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
