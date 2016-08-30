@@ -21,7 +21,7 @@ namespace StudentPartners.Droid
             Xamarin.Insights.Initialize("7192b141f99a9ac22d0dfd02ac5e114f56cbeb08", this);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            AppServiceHelpers.CurrentPlatform.Init(Xamarin.Forms.Forms.Context);
+            // AppServiceHelpers.CurrentPlatform.Init(Xamarin.Forms.Forms.Context);
             LoadApplication(new App());
 
             CheckForUpdates();

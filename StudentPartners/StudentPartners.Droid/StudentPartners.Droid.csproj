@@ -48,10 +48,6 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AppServiceHelpers.Ext, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AppService.Helpers.1.1.0-prerelease-4\lib\MonoAndroid10\AppServiceHelpers.Ext.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.0.107\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
       <Private>True</Private>
@@ -169,6 +165,9 @@
     <Reference Include="Xamarin.Insights, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Insights.1.12.3\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="AppServiceHelpers.Ext">
+      <HintPath>..\..\packages\AppService.Helpers.1.1.0-pre-release\lib\MonoAndroid10\AppServiceHelpers.Ext.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
