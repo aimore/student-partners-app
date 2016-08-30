@@ -7,13 +7,15 @@
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Name="Edit" x:Name="editProfile"></ToolbarItem>
 	</ContentPage.ToolbarItems>
-    <StackLayout BackgroundColor="White">
-        <local:CardView Detail="United States of America"
+	<ScrollView>
+		<StackLayout BackgroundColor="White">
+        	<local:CardView Detail="United States of America"
                         ImageSource="{Binding PhotoUrl}"
                         Text="Pierce Boggan" />
-      <StackLayout Padding="10,10,10,10">
-        <Label Text="Biography" FontSize="Large" TextColor="#030303" />
-        <Label Text="Pierce has built mobile applications with Xamarin since 2011 and is the author of several popular open source applications, including Moments, a Snapchat clone for iOS and Android built with Xamarin.Forms and Microsoft Azure. In 2012, he began working at Xamarin and now works as a Program Manager at Microsoft for Xamarin." />
-      </StackLayout>
-  </StackLayout>
+      		<StackLayout Padding="10,10,10,10">
+        		<Label Text="Biography" FontSize="Large" TextColor="#030303" />
+        		<Label Text="Pierce has built mobile applications with Xamarin since 2011 and is the author of several popular open source applications, including Moments, a Snapchat clone for iOS and Android built with Xamarin.Forms and Microsoft Azure. In 2012, he began working at Xamarin and now works as a Program Manager at Microsoft for Xamarin." />
+      		</StackLayout>
+  		</StackLayout>
+	</ScrollView>
 </ContentPage>
