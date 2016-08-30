@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="StudentPartners.Views.StudentPartnersPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -16,9 +16,8 @@
                   SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <local:CardViewCell Detail="{Binding Address.Country}"
-                                        ImageSource="{Binding PhotoUrl}"
-                                        Text="{Binding Name}" />
+					<TextCell Text="{Binding Name}"
+							Detail="{Binding Address.Country}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
