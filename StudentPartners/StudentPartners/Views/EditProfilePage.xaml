@@ -26,15 +26,6 @@
                                 <Entry Text="{Binding User.Biography}" HorizontalOptions="FillAndExpand" Placeholder="Biography" />
                             </StackLayout>
                         </StackLayout>
-                        <StackLayout Padding="10,0,0,0">
-                            <BoxView BackgroundColor="#C8C8C8"
-                                     HeightRequest="100"
-                                     WidthRequest="100" />
-                            <Label HorizontalTextAlignment="Center"
-                                   Text="Edit"
-                                   TextColor="#1194F6"
-                                   VerticalOptions="End" />
-                        </StackLayout>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Padding="20,0,20,50">
