@@ -20,32 +20,26 @@ namespace StudentPartners
         {
             InitializeComponent();
 
-            /*
-            if (Settings.IsLoggedIn)
-                MainPage = new RootPage();
-            else
-                MainPage = new LoginPage();*/
-              
-            EasyMobileServiceClient.Current.Initialize("https://studentpartners.azurewebsites.net/");
+			EasyMobileServiceClient.Current.Initialize("https://studentpartners.azurewebsites.net/");
 			EasyMobileServiceClient.Current.RegisterTable<StudentPartner>();
 			EasyMobileServiceClient.Current.FinalizeSchema();
 
-            MainPage = new LoginPage();
+			SetMainPage();
         }
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
+		void SetMainPage()
+		{
+			if (Settings.IsLoggedIn)
+			{
+				if (Device.OS != TargetPlatform.iOS)
+					MainPage = new RootPage();
+				else
+					MainPage = new RootPageiOS();
+			}
+			else
+			{
+				MainPage = new LoginPage();
+			}
+		}
     }
 }

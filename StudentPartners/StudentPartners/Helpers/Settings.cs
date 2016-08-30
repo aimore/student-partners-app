@@ -21,8 +21,6 @@ namespace StudentPartners.Helpers
             }
         }
 
-        public static StudentPartner StudentPartner { get; set; }
-
         #region Setting Constants
         private const string LoggedInKey = "logged_in";
 
@@ -36,7 +34,7 @@ namespace StudentPartners.Helpers
         private static readonly string PhotoUrlDefault = "https://secure.gravatar.com/avatar/62921d835f6d165597ff0dcd40fd2664?s=260&d=mm&r=g";
         #endregion
         
-        public static bool IsLoggedIn => EasyMobileServiceClient.Current.MobileService.CurrentUser.UserId != null;
+        public static bool IsLoggedIn => EasyMobileServiceClient.Current.MobileService.CurrentUser?.UserId != null;
 
         public static string FirstName
         {

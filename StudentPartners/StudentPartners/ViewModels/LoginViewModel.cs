@@ -33,14 +33,15 @@ namespace StudentPartners.ViewModels
                 var loginSuccessful = await EasyMobileServiceClient.Current.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory);
                 if (loginSuccessful)
                 {
-                    // Fetch additional information about our user.
                     var studentPartner = await EasyMobileServiceClient.Current.MobileService.InvokeApiAsync<StudentPartner>("UserInfo", System.Net.Http.HttpMethod.Get, null);
                     Settings.FirstName = studentPartner.FirstName;
                     Settings.LastName = studentPartner.LastName;
                     Settings.PhotoUrl = studentPartner.PhotoUrl;
-                    Settings.StudentPartner = studentPartner;
 
-                    Application.Current.MainPage = new RootPage();
+					if (Device.OS != TargetPlatform.iOS)
+						Application.Current.MainPage = new RootPage();
+					else
+						Application.Current.MainPage = new RootPageiOS();
                 }
             }
             catch (Exception ex)
