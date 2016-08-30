@@ -26,16 +26,9 @@ namespace StudentPartners
             else
                 MainPage = new LoginPage();*/
               
-            try
-            {
-                EasyMobileServiceClient.Current.Initialize("https://studentpartners.azurewebsites.net/");
-                EasyMobileServiceClient.Current.RegisterTable<StudentPartner>();
-                EasyMobileServiceClient.Current.FinalizeSchema();
-            }
-            catch (Exception ex)
-            {
-                var x = DateTime.Now;
-            }
+            EasyMobileServiceClient.Current.Initialize("https://studentpartners.azurewebsites.net/");
+			EasyMobileServiceClient.Current.RegisterTable<StudentPartner>();
+			EasyMobileServiceClient.Current.FinalizeSchema();
 
             MainPage = new LoginPage();
         }

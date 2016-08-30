@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using UIKit;
 
+using AppServiceHelpers;
 using HockeyApp.iOS;
 
 namespace StudentPartners.iOS
@@ -20,8 +21,10 @@ namespace StudentPartners.iOS
 			manager.DisableUpdateManager = true;
 			manager.StartManager();
 
+			AppServiceHelpers.CurrentPlatform.Init();
+
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new StudentPartners.App());
 
             return base.FinishedLaunching(app, options);
         }

@@ -168,6 +168,7 @@
     </Reference>
     <Reference Include="AppServiceHelpers.Ext">
       <HintPath>..\..\packages\AppService.Helpers.1.1.0-pre-release\lib\MonoAndroid10\AppServiceHelpers.Ext.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
