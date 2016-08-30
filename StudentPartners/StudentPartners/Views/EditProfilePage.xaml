@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage x:Class="StudentPartners.EditProfilePage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Edit Profile">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Save" />
+        <ToolbarItem Name="Save" Command="{Binding SaveStudentPartnerInformationCommand}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
@@ -14,16 +14,16 @@
                         <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
                             <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                                 <Image Source="editNameIcon" />
-                                <Entry HorizontalOptions="FillAndExpand" Placeholder="First Name" />
-                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Last Name" />
+                                <Entry Text="{Binding User.FirstName}" HorizontalOptions="FillAndExpand" Placeholder="First Name" />
+                                <Entry Text="{Binding User.LastName}" HorizontalOptions="FillAndExpand" Placeholder="Last Name" />
                             </StackLayout>
                             <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                                 <Image Source="editWebsiteIcon" />
-                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Website" Keyboard="Url" />
+                                <Entry Text="{Binding User.Website}" HorizontalOptions="FillAndExpand" Placeholder="Website" Keyboard="Url" />
                             </StackLayout>
                             <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                                 <Image Source="editBioIcon" />
-                                <Entry HorizontalOptions="FillAndExpand" Placeholder="Biography" />
+                                <Entry Text="{Binding User.Biography}" HorizontalOptions="FillAndExpand" Placeholder="Biography" />
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Padding="10,0,0,0">
@@ -41,20 +41,11 @@
                     <Label Text="PERSONAL INFORMATION" />
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editEmailIcon" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Email" Keyboard="Email" />
+                        <Entry Text="{Binding User.Email}" HorizontalOptions="FillAndExpand" Placeholder="Email" Keyboard="Email" />
                     </StackLayout>
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editPhoneIcon" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Phone Number" Keyboard="Telephone" />
-                    </StackLayout>
-                    <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
-                        <Image Source="editGenderIcon" />
-                      <Picker Title="Gender" HorizontalOptions="FillAndExpand">
-                        <Picker.Items>
-                          <x:String>Male</x:String>
-                          <x:String>Female</x:String>
-                        </Picker.Items>
-                      </Picker>
+                        <Entry Text="{Binding User.PhoneNumber}" HorizontalOptions="FillAndExpand" Placeholder="Phone Number" Keyboard="Telephone" />
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Padding="20,0,20,0">
@@ -62,22 +53,22 @@
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editStreetIcon" />
                         <StackLayout HorizontalOptions="FillAndExpand">
-                            <Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 1" />
-                            <Entry HorizontalOptions="FillAndExpand" Placeholder="Address Line 2" />
+                            <Entry Text="{Binding User.Address.AddressLine1}" HorizontalOptions="FillAndExpand" Placeholder="Address Line 1" />
+                            <Entry Text="{Binding User.Address.AddressLine2}" HorizontalOptions="FillAndExpand" Placeholder="Address Line 2" />
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editCityIcon" />
-                        <Entry HorizontalOptions="Start" Placeholder="ZIP Code" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="City" />
+                        <Entry Text="{Binding User.Address.City}" HorizontalOptions="Start" Placeholder="ZIP Code" />
+                        <Entry Text="{Binding User.Address.ZipCode}" HorizontalOptions="FillAndExpand" Placeholder="City" />
                     </StackLayout>
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editStateIcon" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="State" />
+                        <Entry Text="{Binding User.Address.State}" HorizontalOptions="FillAndExpand" Placeholder="State" />
                     </StackLayout>
                     <StackLayout Margin="0,2,0,2" Orientation="Horizontal">
                         <Image Source="editCountryIcon" />
-                        <Entry HorizontalOptions="FillAndExpand" Placeholder="Country" />
+                        <Entry Text="{Binding User.Address.Country}" HorizontalOptions="FillAndExpand" Placeholder="Country" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>

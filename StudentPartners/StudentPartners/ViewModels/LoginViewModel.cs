@@ -37,6 +37,7 @@ namespace StudentPartners.ViewModels
                     Settings.FirstName = studentPartner.FirstName;
                     Settings.LastName = studentPartner.LastName;
                     Settings.PhotoUrl = studentPartner.PhotoUrl;
+					App.User = studentPartner;
 
 					if (Device.OS != TargetPlatform.iOS)
 						Application.Current.MainPage = new RootPage();

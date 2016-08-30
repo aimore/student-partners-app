@@ -103,7 +103,7 @@ namespace StudentPartners.Controls
             var bindingContext = BindingContext as StudentPartner;
             if (bindingContext != null)
             {
-                textLabel.Text = bindingContext.Name;
+				textLabel.Text = $"{bindingContext.FirstName} {bindingContext.LastName}";
                 image.Source = bindingContext.PhotoUrl;
 
                 if (bindingContext.Address != null)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using StudentPartners.ViewModels;
 using Xamarin.Forms;
 
 namespace StudentPartners
@@ -10,6 +11,8 @@ namespace StudentPartners
 		public EditProfilePage()
 		{
 			InitializeComponent();
+
+			BindingContext = new EditPageViewModel();
 		}
 	}
 }

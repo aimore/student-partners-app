@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace StudentPartners.ViewModels
 {
@@ -33,11 +34,6 @@ namespace StudentPartners.ViewModels
             string propertyName,
             Action onChanged = null)
         {
-
-
-            if (EqualityComparer<T>.Default.Equals(backingStore, value))
-                return;
-
             backingStore = value;
 
             if (onChanged != null)
@@ -50,7 +46,7 @@ namespace StudentPartners.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
 
-        public void OnPropertyChanged(string propertyName)
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             if (PropertyChanged == null)
                 return;
