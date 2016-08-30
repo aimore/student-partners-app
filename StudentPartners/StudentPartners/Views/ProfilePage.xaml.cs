@@ -14,7 +14,7 @@ namespace StudentPartners.Views
         {
 			InitializeComponent();
 
-			this.editProfile.Clicked += (sender, e) =>
+			editProfile.Clicked += (sender, e) =>
 			{
 				Navigation.PushAsync(new EditProfilePage(), true);
 			};
