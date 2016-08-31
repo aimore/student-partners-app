@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using StudentPartners.ViewModels;
 using Xamarin.Forms;
 
 namespace StudentPartners.Views
@@ -13,6 +14,8 @@ namespace StudentPartners.Views
         public ProfilePage()
         {
 			InitializeComponent();
+
+			BindingContext = new ProfilePageViewModel();
 
 			editProfile.Clicked += (sender, e) =>
 			{

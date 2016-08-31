@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="Views\RootPageiOS.cs" />
     <Compile Include="ViewModels\EditPageViewModel.cs" />
+    <Compile Include="ViewModels\ProfilePageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
